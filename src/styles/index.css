@@ -1,0 +1,32 @@
+body {
+  margin: 20px;
+  background-image: url("paper-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.charCreator {
+  font: 22px lovecraft, "Century Gothic", Futura, sans-serif;
+}
+
+.messageSection {
+  margin: 6em 0 6em 0;
+}
+
+.messageSection p {
+  font-size: 32px;
+}
+
+ol,
+ul {
+  padding-left: 0;
+}
+
+.profSelector {
+  list-style: none;
+}
+
+@font-face {
+  font-family: lovecraft;
+  src: url(./font/OldStyHPLHS.otf);
+}
