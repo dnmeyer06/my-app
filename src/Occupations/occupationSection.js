@@ -4,12 +4,15 @@ import OccupationOutput from "./occupationOutput.js";
 
 class OccupationSection extends React.Component {
   render() {
+    const skillSpecialtiesMessage = (
+      <div>Selected occupation: {this.props.occupationName}</div>
+    )
     const skillSpecialitesList = (
       <OccupationOutput skillSpecialities={this.props.skillList} />
     );
     return (
       <div className="row">
-        <div className="col-4-sm offset-1">
+        <div className="col-sm-4 offset-1">
           <ul className="profSelector">
             <ProfList
               selectOccupation={this.props.selectOccupation}
@@ -17,11 +20,9 @@ class OccupationSection extends React.Component {
             />
           </ul>
         </div>
-        <div className="col-6-sm offset-1">
-          <div>Selected occupation: {this.props.occupationName}</div>
-          <div className="col-12-sm">
-            {this.props.skillList ? skillSpecialitesList : <span />}
-          </div>
+        <div className="col-sm-6 offset-1-sm">
+          {this.props.skillList ? skillSpecialtiesMessage : null}
+          {this.props.skillList ? skillSpecialitesList : null}
         </div>
       </div>
     );
